@@ -96,3 +96,6 @@ ENV/
 
 # Training data
 training_data/
+other.png
+table.png
+plot.png
