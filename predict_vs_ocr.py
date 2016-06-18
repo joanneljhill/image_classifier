@@ -22,7 +22,7 @@ def get_text(image):
 def get_text_classification(text):
     if 'table ' in text:
         return 'Table'
-    elif 'sem ' in text or 'tem ' in text or 'micrograph' in text:
+    elif 'micrograph' in text:
         return 'Other'
     elif 'plot' in text or 'graph' in text:
         return 'Plot'
@@ -49,7 +49,7 @@ def get_ml_prediction(image):
     test_featurevector = get_featurevector(image)
 
     prediction = clf.predict_proba(test_featurevector)
-    classification = get_ml_classification(prediction, 0.6)
+    classification = get_ml_classification(prediction, 0.75)
 
     return image, prediction[0][0], prediction[0][1], prediction[0][2], classification
 
