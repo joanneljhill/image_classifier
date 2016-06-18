@@ -24,7 +24,7 @@ def get_prediction(image):
     test_featurevector = get_featurevector(image)
 
     prediction = clf.predict_proba(test_featurevector)
-    classification = get_classification(prediction, 0.5)
+    classification = get_classification(prediction, 0.6)
 
     return image, prediction[0][0], prediction[0][1], prediction[0][2], classification
 
