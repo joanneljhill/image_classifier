@@ -18,7 +18,7 @@ def get_training_data(training_data_directory):
             for file in os.listdir(training_data_directory + directory + '/'):
                 if not file.startswith('.'):
 
-                    featurevector = get_featurevector(training_data_directory + directory + '/' + file)
+                    featurevector = get_feature_vector(training_data_directory + directory + '/' + file)
 
                     X.append(featurevector)
                     y.append(directory)
