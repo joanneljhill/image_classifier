@@ -8,11 +8,14 @@ def train_random_forest(X_train, y_train, estimators, model_name):
 
     :param X_train: X training data
     :param y_train: y training data
+    :return: trained model
     """
 
     clf = RandomForestClassifier(n_estimators=estimators)
     clf = clf.fit(X_train, y_train)
     pickle.dump(clf, open(model_name,'w'))
+
+    return clf
 
 def split_data(X, y, test_size):
     """
