@@ -12,7 +12,7 @@ X_train, X_test, y_train, y_test = split_data(X, y, 0.3)
 #evaluate_n_estimators(X_train, X_test, y_train, y_test)
 
 #Train classifier
-train_random_forest(X_train, y_train, 200, 'model_1.p')
+train_random_forest(X_train, y_train, 200, 'model1.p')
 
 #Evaluate model
-evaluate('model_1.p', X_test, y_test)
+evaluate('model1.p', X_test, y_test)
