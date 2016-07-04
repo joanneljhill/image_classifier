@@ -1,7 +1,8 @@
 from sklearn.metrics import f1_score
 from sklearn.metrics import confusion_matrix
 import matplotlib.pyplot as mp
-from model_training import *
+import pickle
+import training
 
 def evaluate(trained_model, X_test, y_test):
     """
@@ -39,7 +40,7 @@ def evaluate_n_estimators(X_train, X_test, y_train, y_test):
     scores = []
 
     for value in estimators:
-        clf = train_random_forest(X_train, y_train, value, (str(value) + '.p'))
+        clf = training.training.train_random_forest(X_train, y_train, value, (str(value) + '.p'))
         scores.append(clf.score(X_test, y_test))
 
     #plot data
