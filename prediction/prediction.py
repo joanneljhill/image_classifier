@@ -1,4 +1,4 @@
-from feature_generation import *
+import features
 
 def get_classification(predicted_probabilities, probability_limit):
     """
@@ -27,7 +27,7 @@ def get_prediction(image, trained_model, probability_limit):
     :param model: trained model
     :return: image name, probability for each class and overall classification
     """
-    test_feature_vector = get_feature_vector(image)
+    test_feature_vector = features.image.get_feature_vector(image)
 
     predicted_probabilities = trained_model.predict_proba(test_feature_vector)
     classification = get_classification(predicted_probabilities, probability_limit)
