@@ -1,2 +1,2 @@
-import image
-import ocr
+from features.image import *
+from features.ocr import *

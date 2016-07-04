@@ -19,7 +19,7 @@ def get_training_data(training_data_directory):
             for file in os.listdir(training_data_directory + directory + '/'):
                 if not file.startswith('.'):
 
-                    featurevector = features.image.get_feature_vector(training_data_directory + directory + '/' + file)
+                    featurevector = features.get_feature_vector(training_data_directory + directory + '/' + file)
 
                     X.append(featurevector)
                     y.append(directory)
@@ -38,9 +38,9 @@ def get_trained_model(training_data_directory, model_name):
     #evaluate_n_estimators(X_train, X_test, y_train, y_test)
 
     #Train classifier
-    training.training.train_random_forest(X_train, y_train, 200, model_name)
+    training.train_random_forest(X_train, y_train, 200, model_name)
 
-    evaluation.evaluation.evaluate(model_name, X_test, y_test)
+    evaluation.evaluate(model_name, X_test, y_test)
 
 
 

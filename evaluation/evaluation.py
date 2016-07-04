@@ -40,7 +40,7 @@ def evaluate_n_estimators(X_train, X_test, y_train, y_test):
     scores = []
 
     for value in estimators:
-        clf = training.training.train_random_forest(X_train, y_train, value, (str(value) + '.p'))
+        clf = training.train_random_forest(X_train, y_train, value, (str(value) + '.p'))
         scores.append(clf.score(X_test, y_test))
 
     #plot data

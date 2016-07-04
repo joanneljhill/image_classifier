@@ -1,1 +1,1 @@
-import prediction
+from prediction import *

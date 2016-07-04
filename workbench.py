@@ -3,7 +3,7 @@ import pickle
 import helpers
 
 #train model
-helpers.train.get_trained_model('/Users/joannehill/ml/image_classifier/training_data/', 'model1.p')
+helpers.get_trained_model('/Users/joannehill/ml/image_classifier/training_data/', 'model1.p')
 
 #get image files to classify
 parser = argparse.ArgumentParser()
@@ -15,5 +15,5 @@ clf = pickle.load(open('model1.p'))
 
 #classify test images
 for image in args.images:
-    helpers.predict.get_text_classification(image)
-    helpers.predict.get_image_classification(image, clf)
+    helpers.get_text_classification(image)
+    helpers.get_image_classification(image, clf)

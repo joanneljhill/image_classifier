@@ -1,2 +1,2 @@
-import train
-import predict
+from helpers.predict import *
+from helpers.train import *
