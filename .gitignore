@@ -97,6 +97,3 @@ ENV/
 # Training data
 training_data/
 untracked/
-other.png
-table.png
-plot.png
