@@ -94,6 +94,9 @@ ENV/
 # Pickles
 *.p
 
+# IntelliJ/Pycharm settings
+.idea
+
 # Training data
 training_data/
 untracked/
